@@ -1,0 +1,50 @@
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
+# Ensure user-installed binaries take precedence
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/:$PATH
+# Load .bashrc if it exists
+test -f ~/.bashrc && source ~/.bashrc
+
+alias goto_git="cd ~/Dropbox/git/DataTools"
+alias goto_dis="goto_git; cd Distillery"
+alias goto_found="goto_git; cd foundry"
+alias goto_wise="goto_git; cd wisetrack"
+alias goto_ssf="goto_git; cd ssfdata"
+alias goto_bar="goto_git; cd barista"
+alias reload_profile="source ~/.bash_profile"
+alias edit_profile="atom ~/.bash_profile"
+alias goto_clob="goto_git; cd /DataToolsETL/Foundry/dataserver/cloBBer"
+alias rsa_key="cat ~/.ssh/id_rsa.pub"
+
+######Protractor#######
+alias protractor_update="./node_modules/protractor/bin/webdriver-manager update"
+alias protractor_stop="curl -s -L http://localhost:4444/selenium-server/driver?cmd=shutDownSeleniumServer > /dev/null 2>&1"
+alias protractor_start="./node_modules/protractor/bin/webdriver-manager start"
+alias protractor_run="protractor config/just_protractor.conf.js"
+
+######GIT#########
+alias gst="git status"
+alias gad="git add ."
+alias gco="git commit"
+alias gpoh="git push origin HEAD"
+alias gcb="git checkout -b"
+alias gch="git checkout"
+alias gdev="git pull origin develop"
+alias gpud="git pull --rebase upstream develop"
+#####Add " HEAD~ + <num of commits>" to end###
+alias gsquash="git rebase -i"
+
+#####oracle#####
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient
+export OCI_LIB_DIR=/opt/oracle/instantclient
+export OCI_INC_DIR=/opt/oracle/instantclient/sdk/include
+
+source ~/.rvm/scripts/rvm
+
+alias kill_node="sudo killall -9 node"
+alias kill_mongo="sudo killall -9 mongod"
+
+##For Open LDAP with Barista##
+export PATH="/usr/local/opt/openldap/bin:$PATH"
+export PATH="/usr/local/opt/openldap/sbin:$PATH"
+export PATH="/usr/local/opt/berkeley-db@4/bin:$PATH"
