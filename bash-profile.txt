@@ -11,10 +11,12 @@ alias goto_found="goto_git; cd foundry"
 alias goto_wise="goto_git; cd wisetrack"
 alias goto_ssf="goto_git; cd ssfdata"
 alias goto_bar="goto_git; cd barista"
+alias goto_jboss="goto_git; cd jboss"
 alias reload_profile="source ~/.bash_profile"
 alias edit_profile="atom ~/.bash_profile"
 alias goto_clob="goto_git; cd /DataToolsETL/Foundry/dataserver/cloBBer"
 alias rsa_key="cat ~/.ssh/id_rsa.pub"
+alias seed_foundry="npm run seed -- --environment=foundry-api-dev"
 
 ######Protractor#######
 alias protractor_update="./node_modules/protractor/bin/webdriver-manager update"
@@ -24,13 +26,16 @@ alias protractor_run="protractor config/just_protractor.conf.js"
 
 ######GIT#########
 alias gst="git status"
-alias gad="git add ."
+alias gad="git add -A"
 alias gco="git commit"
+alias gcone="git commit --amend --no-edit"
 alias gpoh="git push origin HEAD"
+alias gpohf="git push origin head --force"
 alias gcb="git checkout -b"
 alias gch="git checkout"
 alias gdev="git pull origin develop"
 alias gpud="git pull --rebase upstream develop"
+alias gnoedit="gad; gcone; gpohf"
 #####Add " HEAD~ + <num of commits>" to end###
 alias gsquash="git rebase -i"
 
