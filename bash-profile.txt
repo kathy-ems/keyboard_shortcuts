@@ -24,20 +24,27 @@ alias protractor_stop="curl -s -L http://localhost:4444/selenium-server/driver?c
 alias protractor_start="./node_modules/protractor/bin/webdriver-manager start"
 alias protractor_run="protractor config/just_protractor.conf.js"
 
-######GIT#########
+### Git commands ###
+alias gchb="git checkout -b"
+alias gch="git checkout"
+alias gpu="git pull"
+alias gdev="git pull origin develop"
+alias gpud="git pull --rebase upstream develop"
 alias gst="git status"
 alias gad="git add -A"
 alias gco="git commit"
 alias gcone="git commit --amend --no-edit"
 alias gpoh="git push origin HEAD"
 alias gpohf="git push origin head --force"
-alias gcb="git checkout -b"
-alias gch="git checkout"
-alias gdev="git pull origin develop"
-alias gpud="git pull --rebase upstream develop"
 alias gnoedit="gad; gcone; gpohf"
 #####Add " HEAD~ + <num of commits>" to end###
 alias gsquash="git rebase -i"
+
+alias pullmaster="git pull origin master"
+alias pushmaster="git push origin master"
+alias git_heroku="git push heroku master"
+### This will delete local branches that have been merged into origin master
+alias clean_repo="git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d"
 
 #####oracle#####
 export DYLD_LIBRARY_PATH=/opt/oracle/instantclient
