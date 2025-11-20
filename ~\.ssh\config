@@ -22,3 +22,11 @@ Host distillery
 
 Host dtld4
   HostName dtld4.gene.com
+
+Host launchpad
+  HostName dtbm1.gene.com
+  HostKeyAlgorithms +ssh-dss
+
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
