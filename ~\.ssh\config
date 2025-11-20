@@ -1,1 +1,24 @@
+\* vi ~/.ssh/config *\
 
+
+Host *
+  PubkeyAcceptedKeyTypes=+ssh-dss
+
+Host distillery-dev
+  HostName dtld3.gene.com
+  HostKeyAlgorithms +ssh-dss
+
+Host dtld3
+  HostName dtld3.gene.com
+  HostKeyAlgorithms +ssh-dss
+
+Host dtbm1
+  HostName dtbm1.gene.com
+  HostKeyAlgorithms +ssh-dss
+
+Host distillery
+  HostName dtld4.gene.com
+  HostKeyAlgorithms +ssh-dss
+
+Host dtld4
+  HostName dtld4.gene.com
